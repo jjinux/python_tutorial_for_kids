@@ -137,3 +137,25 @@ def say_message(message, num_times):
         print(message)
 
 say_message("Python rules!", 3)
+
+# There's another subtle thing about functions. Functions can have variables inside of them that
+# don't exist outside the function. For instance:
+def add(a, b):
+    sum = a + b  # sum only exists inside the function.
+    return sum
+
+print(add(5, 6))
+
+# However, if you want to set a variable that exists outside your function from inside your function
+# you need to tell it that the variable is global. This is helpful since the variable doesn't
+# get reset everytime you call the function.
+counter = 0
+
+def count():
+    global counter
+    counter += 1
+
+count()
+count()
+count()
+print("The counter is now: %s" % counter)
