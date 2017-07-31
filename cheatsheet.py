@@ -21,12 +21,12 @@ print('Hello World!')
 # going to ask the user their name, store it in a "variable" called name, and then say hello to
 # them.
 name = input("What's your name? ")
-print("Hello")
-print(name)
+print("Hello", name)
+# Note, it'll automatically put a space between "Hello" and name.
 
-# Instead of using two lines with print, we can use the "%" operator. The "%" operator replaces
-# "%s" with the name. There are multiple ways to do this sort of thing in Python, but this is good
-# enough for now.
+# If we want to get more sophisticated with how we output things, we can use the "%" operator.
+# The "%" operator replaces "%s" with the name. There are multiple ways to do this sort of thing
+# in Python, but this is good enough for now.
 print("Hello, %s!" % name)
 
 # When you read data from the user, if you want to treat it as a number, you need to convert it
@@ -137,3 +137,11 @@ def say_message(message, num_times):
         print(message)
 
 say_message("Python rules!", 3)
+
+# We've already seen a few builtin functions like input, print, and range. Here are another two
+# that might be helpful. min() returns the smallest number of all the numbers you give it.
+# max() returns the biggest number of all the numbers you give it.
+print("Hmm, what's the biggest number, 3, 5, or 2?")
+print(max(3, 5, 2))
+print("What's the smallest number, 3, 5, or 2?")
+print(min(3, 5, 2))
