@@ -137,11 +137,3 @@ def say_message(message, num_times):
         print(message)
 
 say_message("Python rules!", 3)
-
-# We've already seen a few builtin functions like input, print, and range. Here are another two
-# that might be helpful. min() returns the smallest number of all the numbers you give it.
-# max() returns the biggest number of all the numbers you give it.
-print("Hmm, what's the biggest number, 3, 5, or 2?")
-print(max(3, 5, 2))
-print("What's the smallest number, 3, 5, or 2?")
-print(min(3, 5, 2))
