@@ -1,4 +1,4 @@
-"""This is a ridiculous, sexist, silly simulation of high school."""
+"""This is a ridiculous simulation of high school."""
 
 import sys
 
