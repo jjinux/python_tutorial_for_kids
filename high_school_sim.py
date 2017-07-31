@@ -24,11 +24,15 @@ intelligence = INITIAL_INTELLIGENCE
 
 
 def interpret_choice(choice):
+
+    # Anytime you want to set a variable that actually exists outside the function, you have to
+    # tell Python that. These variables are actually from outside the function, so we use global.
+    # If they were only used inside the function, we wouldn't do this.
     global wakefulness, muscles, intelligence
+
     if choice == "sleep":
         print("zzzzzz")
         wakefulness += SLEEP_POINTS_PER_DAY
-        wakefulness = min(wakefulness, SLEEP_POINTS_PER_DAY)  # Sleeping too much doesn't help.
         wakefulness += SLEEP_POINTS_LOST_PER_TURN  # You don't get sleepy if you're sleeping.
     elif choice == "workout":
         print("Time to get ripped!")
