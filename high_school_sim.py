@@ -33,6 +33,8 @@ def interpret_choice(choice):
     if choice == "sleep":
         print("zzzzzz")
         wakefulness += SLEEP_POINTS_PER_DAY
+        if wakefulness > SLEEP_POINTS_PER_DAY:  # Sleeping too much doesn't help.
+            wakefulness = SLEEP_POINTS_PER_DAY
         wakefulness += SLEEP_POINTS_LOST_PER_TURN  # You don't get sleepy if you're sleeping.
     elif choice == "workout":
         print("Time to get ripped!")
@@ -66,7 +68,8 @@ def next_turn():
         print("You fell asleep while walking and got hit by a bus!")
         print("Game Over")
         sys.exit(0)
-    print("wakefulness: %s muscles: %s intelligence: %s" % (wakefulness, muscles, intelligence))
+    print("[ wakefulness: %s ][ muscles: %s ][ intelligence: %s ]" %
+          (wakefulness, muscles, intelligence))
 
 
 while True:
